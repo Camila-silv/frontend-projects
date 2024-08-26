@@ -11,7 +11,7 @@ export default function Header() {
         className="text-xl absolute right-6 h-2.5"
         onClick={() => setShowModal({...showModal, showCart: false})}
       >
-        <img src="./src/assets/icon-close.png" alt="" className="h-full" />
+        <img src="../../../../assets/icon-close.png" alt="" className="h-full" />
       </button>
     </header>
   );
