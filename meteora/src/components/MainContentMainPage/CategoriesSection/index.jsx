@@ -1,6 +1,9 @@
 import categoryItems from "./data/categoryItems.json";
 import CategoryItem from "./CategoryItem";
 
+
+
+
 export default function CategoriesSection() {
   return (
     <section className="mx-auto md:w-690 lg:w-1110 font-inter">

@@ -1,6 +1,6 @@
-import largerImg from "../../assets/banner carrinho de compras/Banner Carrinho.png";
-import mediumImg from "../../assets/banner carrinho de compras/Banner Carrinho 1.png";
-import smallImg from "../../assets/banner carrinho de compras/Banner Carrinho 2.png";
+import largerImg from "../../../public/assets/banner carrinho de compras/Banner Carrinho.png";
+import mediumImg from "../../../public/assets/banner carrinho de compras/Banner Carrinho 1.png";
+import smallImg from "../../../public/assets/banner carrinho de compras/Banner Carrinho 2.png";
 import { useEffect, useRef, useState } from "react";
 
 export default function ShoppingCartBanner() {

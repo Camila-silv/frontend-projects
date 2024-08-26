@@ -8,7 +8,7 @@ export default function BenefitsSection() {
       <ul className="flex flex-col gap-8 items-center lg:flex-row lg:justify-center">
         <li className="flex items-center gap-6 w-319">
           <div>
-            <img src="./src/assets/Desktop/Ícones/x-diamond (2).png" alt="" />
+            <img src="../../../../assets/Desktop/Ícones/x-diamond (2).png" alt="" />
           </div>
           <div className="flex flex-col gap-2">
             <h3 className="text-green-1 font-bold text-base uppercase">
@@ -22,7 +22,7 @@ export default function BenefitsSection() {
         <li className="flex items-center gap-6 w-319">
           <div>
             <img
-              src="./src/assets/Desktop/Ícones/arrow-repeat (2).png"
+              src="../../../../assets/Desktop/Ícones/arrow-repeat (2).png"
               alt=""
             />
           </div>
@@ -37,7 +37,7 @@ export default function BenefitsSection() {
         </li>
         <li className="flex items-center gap-6 w-319">
           <div>
-            <img src="./src/assets/Desktop/Ícones/flower1 (3).png" alt="" />
+            <img src="../../../../assets/Desktop/Ícones/flower1 (3).png" alt="" />
           </div>
           <div className="flex flex-col gap-2">
             <h3 className="text-green-1 font-bold text-base uppercase">

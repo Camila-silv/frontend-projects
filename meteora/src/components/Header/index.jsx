@@ -14,7 +14,8 @@ export default function Header({ home = false }) {
           <div className="flex items-center gap-8 justify-between w-full md:w-auto md:mr-auto md:justify-normal">
             <a href="/">
               <img
-                src="./src/assets/Mobile/Logo-mobile.png"
+          
+                src="../../../../assets/Mobile/Logo-mobile.png"
                 alt="Logo Meteora"
               />
             </a>
