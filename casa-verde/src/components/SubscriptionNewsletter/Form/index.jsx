@@ -24,20 +24,18 @@ export default function Form() {
 
     emailjs
       .send(
-        "service_3wpwvvl",
-        "template_ph8mfe7",
+        import.meta.env.SERVICE_KEY,
+        import.meta.env.TEMPLATE_KEY,
         templateParams,
-        "eF9yvNtNZ1roC2pob"
+        import.meta.env.PRIMARY_KEY
       )
       .then((response) => {
         console.log("E-mail enviado", response.status, response.text);
         setShowRegisteredEmailAlert(true);
-        
       })
       .catch((error) => {
         console.log("Erro ao enviar e-mail: ", error);
       });
-  
   };
 
   const validateEmail = () => {
