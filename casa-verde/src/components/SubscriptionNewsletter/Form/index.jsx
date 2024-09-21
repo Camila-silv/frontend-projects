@@ -24,10 +24,10 @@ export default function Form() {
 
     emailjs
       .send(
-        import.meta.env.SERVICE_KEY,
-        import.meta.env.TEMPLATE_KEY,
+        import.meta.env.VITE_SERVICE_KEY,
+        import.meta.env.VITE_TEMPLATE_KEY,
         templateParams,
-        import.meta.env.PRIMARY_KEY
+        import.meta.env.VITE_PRIMARY_KEY
       )
       .then((response) => {
         console.log("E-mail enviado", response.status, response.text);
