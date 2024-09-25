@@ -3,37 +3,37 @@
     {
       "name": "Ajuga reptans",
       "preco": 18,
-      "img": "src/assets/produto-01 1.png",
+      "img": "./src/assets/produto-01 1.png",
       "ordem": 0
     },
     {
       "name": "Cordyline fruticosa",
       "preco": 20,
-      "img": "src/assets/produto-02 1.png",
+      "img": "./src/assets/produto-02 1.png",
       "ordem": 1
     },
     {
       "name": "Crassula ovata",
       "preco": 21,
-      "img": "src/assets/produto-03 1.png",
+      "img": "./src/assets/produto-03 1.png",
       "ordem": 2
     },
     {
       "name": "Cyperus rotundus",
       "preco": 40,
-      "img": "src/assets/produto-04 1.png",
+      "img": "./src/assets/produto-04 1.png",
       "ordem": 3
     },
     {
       "name": "Delairea odorata",
       "preco": 20,
-      "img": "src/assets/produto-05 1.png",
+      "img": "./src/assets/produto-05 1.png",
       "ordem": 4
     },
     {
       "name": "Datura metel",
       "preco": 13,
-      "img": "src/assets/produto-06 1.png",
+      "img": "./src/assets/produto-06 1.png",
       "ordem": 5
     }
   ]

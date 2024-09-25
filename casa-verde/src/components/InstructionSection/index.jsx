@@ -1,9 +1,12 @@
+import Plant from "../../assets/image 3.png"
+
+
 export default function InstructionSection() {
   return (
     <section className="max-w-995 w-full flex mx-auto h-440 shadow-1 mb-16 md-second:flex-col md-second:h-auto md-second:max-w-530">
       <div className="">
         <img
-          src="./src/assets/image 3.png"
+          src={Plant}
           alt="Foto ilustrativa de uma planta"
           className="w-full h-full"
         />
