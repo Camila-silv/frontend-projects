@@ -3,13 +3,55 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Vite</title>
+    <title>Oceanis</title>
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Vite!</h1>
-      <button class="btn btn-primary">Primary button</button>
-    </div>
+    <header class="container mx-auto px-5">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container py-3">
+          <a class="navbar-brand text-uppercase text-primary fw-bold" href="#">Oceanis</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-md-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Início</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">O que oferecemos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Destinos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Benefícios Exclusivos</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-primary bg-primary text-white"
+                  href="#"
+                  >Reserve agora!</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
