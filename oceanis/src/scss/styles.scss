@@ -1,2 +1,51 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+
+.container,
+.container-sm,
+.container-md {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1920px;
+}
+
+input {
+  outline: none;
+}
+
+.banner-container {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url("../images/banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  min-height: 550px;
+}
+
+
+
+.banner-container span {
+  font-size: 24px;
+}
+
+.banner-container p {
+  font-size: 17px;
+}
+
+.banner-container__form input,
+.banner-container__form button {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-container__form input {
+    max-width: 480px;
+  }
+
+  .banner-container__form button {
+    max-width: 232px;
+  }
+}
