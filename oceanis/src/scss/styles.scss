@@ -67,3 +67,18 @@ input {
 .destinations-container p {
   font-size: 20px;
 }
+
+.form-container {
+  background-color: #f8fafb;
+}
+
+.form-container__btn {
+  width: 100%;
+  max-width: 32rem;
+}
+
+@media screen and (min-width: 768px) {
+  .form-container__btn {
+    max-width: 138px;
+  }
+}
