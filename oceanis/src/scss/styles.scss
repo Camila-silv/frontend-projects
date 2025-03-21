@@ -17,15 +17,14 @@ input {
 }
 
 .banner-container {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),url("../images/banner.webp");
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../images/banner.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   padding: 80px 0;
   min-height: 550px;
 }
-
-
 
 .banner-container span {
   font-size: 24px;
@@ -51,7 +50,20 @@ input {
 }
 
 .testimonial-card img {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-  }
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.destinations-container {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../images/destinations-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 32rem;
+}
+
+.destinations-container p {
+  font-size: 20px;
+}
