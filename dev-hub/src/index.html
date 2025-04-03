@@ -1,12 +1,69 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DevHub</title>
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    
+    <header class="bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg  container">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DevHub</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" aria-label="Home"><i class="bi bi-house-door"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" aria-label="Discover"><i class="bi bi-compass"></i> Discover</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link"  href="#" aria-label="Messages">
+                  <i class="bi bi-chat-dots"></i> Messages <span class="badge text-bg-danger">3</span></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2 input-border-radius"
+                type="search"
+                placeholder="Search on DevHub"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-primary rounded-circle" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+            <div class="dropdown ms-3">
+              <button class="btn btn-primary dropdown-toggle btn-border-radius" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-three-dots-vertical"></i> Options
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark mt-3">
+                <li><a class="dropdown-item active" href="#"><i class="bi bi-person-circle"></i> My Account</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settinfs and Privacy</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle"></i> Help and Support</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-moon-stars"></i> Switch theme</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-door-open"></i> Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
   </body>
 </html>
