@@ -6,7 +6,7 @@
     <title>DevHub</title>
     <script type="module" src="./js/main.js" defer></script>
   </head>
-  <body>
+  <body class="d-flex flex-column">
     <header class="bg-body-tertiary">
       <nav class="navbar navbar-expand-lg container">
         <div class="container-fluid">
@@ -104,7 +104,7 @@
       </nav>
     </header>
 
-    <div class="container row mx-auto mt-4">
+    <div class="container row mx-auto mt-4 flex-grow-1">
       <aside class="d-none d-lg-block col-3">
         <div class="card bg-body-tertiary shadow border border-0">
           <div class="card-body">
@@ -178,7 +178,7 @@
                   <span class="fs-6">5 Hours ago</span>
                 </div>
               </div>
-              <p class="mb-5 mt-4">
+              <p class="my-4">
                 Looking for a calloborator for my React app. DM me!
               </p>
 
@@ -219,7 +219,7 @@
                   <span class="fs-6">5 Hours ago</span>
                 </div>
               </div>
-              <p class="mb-5 mt-4">
+              <p class="my-4">
                 Looking for a calloborator for my React app. DM me!
               </p>
 
@@ -309,6 +309,12 @@
         </div>
       </aside>
     </div>
+
+    <footer class="bg-body-tertiary mt-5 d-flex justify-content-center align-items-center py-2">
+      <p class="text-center m-0">
+        <i class="bi bi-c-circle"></i> 2025 DevHub. All rights reserved.
+      </p>
+    </footer>
 
     <!-- Modal -->
     <div
