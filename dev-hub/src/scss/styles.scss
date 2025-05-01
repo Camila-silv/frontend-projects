@@ -10,3 +10,21 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
+
+.modal-dialog {
+    padding-top: 140px;
+}
+
+.modal textarea {
+    outline: none;
+    resize: none;
+    height: 130px;
+    overflow-y: scroll;
+}
+
+.post-card input:focus {
+    outline: none;
+    border: none !important;
+    box-shadow: none;
+    color: transparent;
+}

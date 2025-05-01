@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DevHub</title>
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js" defer></script>
   </head>
   <body>
     <header class="bg-body-tertiary">
-      <nav class="navbar navbar-expand-lg  container">
+      <nav class="navbar navbar-expand-lg container">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">DevHub</a>
           <button
@@ -25,15 +25,25 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#" aria-label="Home"><i class="bi bi-house-door"></i> Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  aria-label="Home"
+                  ><i class="bi bi-house-door"></i> Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" aria-label="Discover"><i class="bi bi-compass"></i> Discover</a>
+                <a class="nav-link" href="#" aria-label="Discover"
+                  ><i class="bi bi-compass"></i> Discover</a
+                >
               </li>
-            
+
               <li class="nav-item">
-                <a class="nav-link"  href="#" aria-label="Messages">
-                  <i class="bi bi-chat-dots"></i> Messages <span class="badge text-bg-danger">3</span></a>
+                <a class="nav-link" href="#" aria-label="Messages">
+                  <i class="bi bi-chat-dots"></i> Messages
+                  <span class="badge text-bg-danger">3</span></a
+                >
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -43,27 +53,304 @@
                 placeholder="Search on DevHub"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-primary rounded-circle" type="submit">
+              <button
+                class="btn btn-outline-primary rounded-circle"
+                type="submit"
+              >
                 <i class="bi bi-search"></i>
               </button>
             </form>
             <div class="dropdown ms-3">
-              <button class="btn btn-primary dropdown-toggle btn-border-radius" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <button
+                class="btn btn-primary dropdown-toggle btn-border-radius"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 <i class="bi bi-three-dots-vertical"></i> Options
               </button>
               <ul class="dropdown-menu dropdown-menu-dark mt-3">
-                <li><a class="dropdown-item active" href="#"><i class="bi bi-person-circle"></i> My Account</a></li>
-                <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settinfs and Privacy</a></li>
-                <li><a class="dropdown-item" href="#"><i class="bi bi-question-circle"></i> Help and Support</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#"><i class="bi bi-moon-stars"></i> Switch theme</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#"><i class="bi bi-door-open"></i> Logout</a></li>
+                <li>
+                  <a class="dropdown-item active" href="#"
+                    ><i class="bi bi-person-circle"></i> My Account</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-gear"></i> Settinfs and Privacy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-question-circle"></i> Help and Support</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-moon-stars"></i> Switch theme</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-door-open"></i> Logout</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
     </header>
+
+    <div class="container row mx-auto mt-4">
+      <aside class="d-none d-lg-block col-3">
+        <div class="card bg-body-tertiary shadow border border-0">
+          <div class="card-body">
+            <h5 class="card-title">Navigation</h5>
+
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-person"></i> Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-people"></i> Groups</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="bi bi-code"></i> Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"
+                  ><i class="bi bi-calendar-event"></i> Events</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><i class="bi bi-bookmark"></i> Saved</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <main class="col-12 col-lg-6">
+        <div class="card bg-body-tertiary shadow border border-0 post-card">
+          <div class="card-body d-flex gap-2">
+            <img
+              src="https://unsplash.it/48"
+              alt=""
+              title=""
+              height=""
+              width=""
+              class="rounded-circle"
+            />
+            <input
+              type="text"
+              aria-label="Insire seu post"
+              class="form-control"
+              placeholder="Whats have you been building?"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              data-modal
+              readonly
+            />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="d-flex flex-column gap-3">
+          <div class="card bg-body-tertiary border border-0">
+            <div class="card-body">
+              <div class="d-flex gap-3 align-items-center mb-4">
+                <img
+                  src="https://unsplash.it/48"
+                  alt=""
+                  class="rounded-circle"
+                />
+                <div>
+                  <h3 class="fs-5 mb-1 fw-semibold">Jane Smith</h3>
+                  <span class="fs-6">5 Hours ago</span>
+                </div>
+              </div>
+              <p class="mb-5 mt-4">
+                Looking for a calloborator for my React app. DM me!
+              </p>
+
+              <hr />
+
+              <div class="d-flex justify-content-around">
+                <button
+                  type="button"
+                  class="btn btn-secondary bg-transparent border border-0"
+                >
+                  <i class="bi bi-hand-thumbs-up"></i> Curtir
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary bg-transparent border border-0"
+                >
+                  <i class="bi bi-chat"></i> Comentar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary bg-transparent border border-0"
+                >
+                  <i class="bi bi-share"></i> Compartilhar
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-body-tertiary border border-0">
+            <div class="card-body">
+              <div class="d-flex gap-3 align-items-center mb-4">
+                <img
+                  src="https://unsplash.it/48"
+                  alt=""
+                  class="rounded-circle"
+                />
+                <div>
+                  <h3 class="fs-5 mb-1 fw-semibold">Jane Smith</h3>
+                  <span class="fs-6">5 Hours ago</span>
+                </div>
+              </div>
+              <p class="mb-5 mt-4">
+                Looking for a calloborator for my React app. DM me!
+              </p>
+
+              <hr />
+
+              <div class="d-flex justify-content-around">
+                <button
+                  type="button"
+                  class="btn btn-secondary bg-transparent border border-0"
+                >
+                  <i class="bi bi-hand-thumbs-up"></i> Curtir
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary bg-transparent border border-0"
+                >
+                  <i class="bi bi-chat"></i> Comentar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary bg-transparent border border-0"
+                >
+                  <i class="bi bi-share"></i> Compartilhar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="d-none d-lg-block col-3">
+        <div class="card bg-body-tertiary shadow border border-0 mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Trends</h5>
+
+            <ul class="list-unstyled">
+              <li><a href="#">#OpenSource</a></li>
+              <li><a href="#">#ReactJS</a></li>
+              <li><a href="#">#WebDevelopment</a></li>
+              <li><a href="#">#CSS</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          id="carouselExampleSlidesOnly"
+          class="carousel slide shadow"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                style="
+                  background-color: #bbb;
+                  display: grid;
+                  place-content: center;
+                  height: 10rem;
+                "
+              >
+                Imagem 1
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                style="
+                  background-color: #bbb;
+                  display: grid;
+                  place-content: center;
+                  height: 10rem;
+                "
+              >
+                Imagem 2
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                style="
+                  background-color: #bbb;
+                  display: grid;
+                  place-content: center;
+                  height: 10rem;
+                "
+              >
+                Imagem 3
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New Post</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <textarea
+              name=""
+              id=""
+              placeholder="Share something..."
+              class="w-100 rounded-4 p-3"
+              aria-label="New post"
+              data-post
+            ></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Publish Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
