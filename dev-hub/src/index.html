@@ -155,7 +155,7 @@
               class="form-control"
               placeholder="Whats have you been building?"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              data-bs-target="#modal"
               data-modal
               readonly
             />
@@ -164,89 +164,8 @@
 
         <hr />
 
-        <div class="d-flex flex-column gap-3">
-          <div class="card bg-body-tertiary border border-0">
-            <div class="card-body">
-              <div class="d-flex gap-3 align-items-center mb-4">
-                <img
-                  src="https://unsplash.it/48"
-                  alt=""
-                  class="rounded-circle"
-                />
-                <div>
-                  <h3 class="fs-5 mb-1 fw-semibold">Jane Smith</h3>
-                  <span class="fs-6">5 Hours ago</span>
-                </div>
-              </div>
-              <p class="my-4">
-                Looking for a calloborator for my React app. DM me!
-              </p>
-
-              <hr />
-
-              <div class="d-flex justify-content-around">
-                <button
-                  type="button"
-                  class="btn btn-secondary bg-transparent border border-0"
-                >
-                  <i class="bi bi-hand-thumbs-up"></i> Curtir
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary bg-transparent border border-0"
-                >
-                  <i class="bi bi-chat"></i> Comentar
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary bg-transparent border border-0"
-                >
-                  <i class="bi bi-share"></i> Compartilhar
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="card bg-body-tertiary border border-0">
-            <div class="card-body">
-              <div class="d-flex gap-3 align-items-center mb-4">
-                <img
-                  src="https://unsplash.it/48"
-                  alt=""
-                  class="rounded-circle"
-                />
-                <div>
-                  <h3 class="fs-5 mb-1 fw-semibold">Jane Smith</h3>
-                  <span class="fs-6">5 Hours ago</span>
-                </div>
-              </div>
-              <p class="my-4">
-                Looking for a calloborator for my React app. DM me!
-              </p>
-
-              <hr />
-
-              <div class="d-flex justify-content-around">
-                <button
-                  type="button"
-                  class="btn btn-secondary bg-transparent border border-0"
-                >
-                  <i class="bi bi-hand-thumbs-up"></i> Curtir
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary bg-transparent border border-0"
-                >
-                  <i class="bi bi-chat"></i> Comentar
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary bg-transparent border border-0"
-                >
-                  <i class="bi bi-share"></i> Compartilhar
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="d-flex flex-column gap-3" id="posts-container">
+          
         </div>
       </main>
 
@@ -319,15 +238,15 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="modal"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="postModal"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">New Post</h1>
+            <h1 class="modal-title fs-5" id="postModal">New Post</h1>
             <button
               type="button"
               class="btn-close"
@@ -338,7 +257,7 @@
           <div class="modal-body">
             <textarea
               name=""
-              id=""
+              id="message"
               placeholder="Share something..."
               class="w-100 rounded-4 p-3"
               aria-label="New post"
@@ -353,7 +272,7 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Publish Post</button>
+            <button type="button" class="btn btn-primary" id="publish-post">Publish Post</button>
           </div>
         </div>
       </div>

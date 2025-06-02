@@ -1,6 +1,19 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    {
+      "id": "b4cd",
+      "post": "Primeiro post...",
+      "date": "2/Jun/2025"
+    },
+    {
+      "id": "dc2b",
+      "post": "Segundo post...",
+      "date": "2/Jun/2025"
+    },
+    {
+      "id": "723f",
+      "post": "teste3",
+      "date": "2/Jun/2025"
+    }
   ]
 }
