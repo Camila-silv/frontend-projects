@@ -111,6 +111,19 @@ export default function App() {
           </section>
         </div>
       </main>
+      <footer className="bg-black-light px-6 py-16">
+        <div className="flex flex-col items-center">
+          <img
+            src={logo}
+            alt="Logo da B7Burger"
+            title="Logo da B7Burger"
+            height="34"
+            width="182"
+            className="mb-4"
+          />
+          <p className="text-xl text-[#5F5F5F] font-normal text-center">powered by B7Web.</p>
+        </div>
+      </footer>
     </>
   );
 }
