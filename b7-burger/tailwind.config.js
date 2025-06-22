@@ -17,8 +17,16 @@ export default {
       backgroundImage: {
         "pattern-hero":
           "linear-gradient(180deg,rgba(20, 20, 20, 1) 66%, rgba(31, 31, 31, 1) 66%)",
-        'card': "linear-gradient(180deg,rgba(43, 43, 43, 1) 40%, rgba(31, 31, 31, 1) 40%)",
+        "desktop-pattern-hero":
+          "linear-gradient(180deg,rgba(20, 20, 20, 1) 64%, rgba(31, 31, 31, 1) 64%)",
+        card: "linear-gradient(180deg,rgba(43, 43, 43, 1) 40%, rgba(31, 31, 31, 1) 40%)",
       },
+    },
+    screens: {
+      laptop: "992px",
+      // => @media (min-width: 992px) { ... }
+      desktop: "1400px",
+      // => @media (min-width: 1400px) { ... }
     },
   },
   plugins: [],
