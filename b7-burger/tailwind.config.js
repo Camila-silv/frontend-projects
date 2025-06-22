@@ -14,9 +14,11 @@ export default {
         inter: ["Inter", "sans-serif"],
         calistoga: ["Calistoga", "serif"],
       },
-        backgroundImage: {
-        'hero-pattern': "linear-gradient(180deg,rgba(20, 20, 20, 1) 66%, rgba(31, 31, 31, 1) 66%)",
-      }
+      backgroundImage: {
+        "pattern-hero":
+          "linear-gradient(180deg,rgba(20, 20, 20, 1) 66%, rgba(31, 31, 31, 1) 66%)",
+        'card': "linear-gradient(180deg,rgba(43, 43, 43, 1) 40%, rgba(31, 31, 31, 1) 40%)",
+      },
     },
   },
   plugins: [],

@@ -1,5 +1,6 @@
 import logo from "./assets/images/logo.png";
 import hero from "./assets/images/hero.png";
+import { Card } from "./components";
 
 export default function App() {
   return (
@@ -45,7 +46,7 @@ export default function App() {
       </header>
       <main className="container mx-auto ">
         <div>
-          <div className="bg-hero-pattern px-5">
+          <div className="bg-pattern-hero px-5">
             <div>
               <h2 className="text-[44px] text-white text-center font-calistoga leading-[50.4px] font-normal pt-20">
                 O Hamburguer mais delicioso.😋
@@ -65,7 +66,14 @@ export default function App() {
               </a>
             </div>
 
-            <img src={hero} alt="Ilustração de um Burger" title="Ilustração de um Burger" loading="lazy" height="445" width="340" />
+            <img
+              src={hero}
+              alt="Ilustração de um Burger"
+              title="Ilustração de um Burger"
+              loading="lazy"
+              height="445"
+              width="340"
+            />
 
             <div>
               <p className="font-inter font-medium text-white text-[30px] text-center my-5">
@@ -86,15 +94,21 @@ export default function App() {
                     id="category"
                     className="bg-transparent outline-none text-white grow"
                   >
-                    <option value="" >Selecionar categoria</option>
-                    <option value="saab" >Saab</option>
-                    <option value="mercedes" >Mercedes</option>
-                    <option value="audi" >Audi</option>
+                    <option value="">Selecionar categoria</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
                   </select>
                 </div>
               </div>
             </div>
           </div>
+
+          <section className="bg-black-dark py-10 px-6 flex flex-col gap-6">
+            <Card />
+            <Card />
+            <Card />
+          </section>
         </div>
       </main>
     </>
