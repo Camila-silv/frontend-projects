@@ -25,8 +25,8 @@ export default {
     screens: {
       laptop: "992px",
       // => @media (min-width: 992px) { ... }
-      desktop: "1400px",
-      // => @media (min-width: 1400px) { ... }
+      desktop: "1200px",
+      // => @media (min-width: 1200px) { ... }
     },
   },
   plugins: [],

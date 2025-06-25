@@ -564,10 +564,14 @@ video {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .container {
-    max-width: 1400px;
+    max-width: 1200px;
   }
+}
+
+.m-0 {
+  margin: 0px;
 }
 
 .mx-auto {
@@ -595,6 +599,22 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-\[-150px\] {
+  margin-top: -150px;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mt-\[-270px\] {
+  margin-top: -270px;
 }
 
 .block {
@@ -625,6 +645,10 @@ video {
   height: 67px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-\[214px\] {
   width: 214px;
 }
@@ -643,6 +667,10 @@ video {
 
 .grow {
   flex-grow: 1;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-1 {
@@ -726,6 +754,11 @@ video {
   background-color: transparent;
 }
 
+.bg-black-normal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(43 43 43 / var(--tw-bg-opacity, 1));
+}
+
 .bg-card {
   background-image: linear-gradient(180deg,rgba(43, 43, 43, 1) 40%, rgba(31, 31, 31, 1) 40%);
 }
@@ -765,6 +798,42 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pt-36 {
+  padding-top: 9rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-28 {
+  padding-top: 7rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pb-32 {
+  padding-bottom: 8rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 
 .text-center {
@@ -877,6 +946,14 @@ video {
     margin-right: 0px;
   }
 
+  .laptop\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .laptop\:mt-\[-270px\] {
+    margin-top: -270px;
+  }
+
   .laptop\:block {
     display: block;
   }
@@ -909,16 +986,12 @@ video {
     width: auto;
   }
 
-  .laptop\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .laptop\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .laptop\:flex-row {
     flex-direction: row;
-  }
-
-  .laptop\:justify-center {
-    justify-content: center;
   }
 
   .laptop\:justify-between {
@@ -946,8 +1019,33 @@ video {
     padding-top: 1.5rem;
   }
 
+  .laptop\:pt-12 {
+    padding-top: 3rem;
+  }
+
+  .laptop\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .laptop\:pt-28 {
+    padding-top: 7rem;
+  }
+
+  .laptop\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .laptop\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
   .laptop\:text-start {
     text-align: start;
+  }
+
+  .laptop\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .laptop\:text-7xl {
@@ -959,8 +1057,30 @@ video {
     font-size: 32px;
   }
 
-  .laptop\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .laptop\:text-\[58px\] {
+    font-size: 58px;
+  }
+
+  .laptop\:text-\[\] {
+    color: ;
+  }
+}
+
+@media (min-width: 1200px) {
+  .desktop\:mt-\[-270px\] {
+    margin-top: -270px;
+  }
+
+  .desktop\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .desktop\:pt-20 {
+    padding-top: 5rem;
+  }
+
+  .desktop\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }
