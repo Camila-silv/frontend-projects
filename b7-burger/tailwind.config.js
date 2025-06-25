@@ -20,6 +20,8 @@ export default {
       },
     },
     screens: {
+      mobile: "400px",
+      // => @media (min-width: 400px) { ... }
       laptop: "992px",
       // => @media (min-width: 992px) { ... }
       desktop: "1200px",
