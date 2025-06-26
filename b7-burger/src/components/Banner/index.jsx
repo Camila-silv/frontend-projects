@@ -21,7 +21,7 @@ export default function Banner() {
           <a
             href=""
             title="Fazer pedido"
-            className="text-[18px] font-inter text-white text-center font-semibold bg-orange-normal w-[265px] h-[50px] block flex justify-center items-center mx-auto rounded-[5px] mb-10 laptop:mx-0  laptop:h-[60px] laptop:w-[280px]"
+            className="text-[18px] font-inter text-white text-center border border-orange-normal font-semibold bg-orange-normal w-[265px] h-[50px] block flex justify-center items-center mx-auto rounded-[5px] mb-10 laptop:mx-0  laptop:h-[60px] laptop:w-[280px] hover:border-white hover:bg-transparent ease-in duration-300"
           >
             Fazer pedido
           </a>

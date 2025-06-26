@@ -5,5 +5,6 @@ import SectionBurgerSearch from "./SectionBurgerSearch";
 import Banner from "./Banner";
 import Menu from "./Menu";
 import Cart from "./Cart";
+import Modal from "./Modal";
 
-export { Card, Footer, Header, SectionBurgerSearch, Banner, Menu, Cart };
+export { Card, Footer, Header, SectionBurgerSearch, Banner, Menu, Cart, Modal };

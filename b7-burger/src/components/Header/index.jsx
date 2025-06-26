@@ -45,7 +45,7 @@ export default function Header({ logo }) {
             </ul>
           </nav>
 
-          <button className="text-lg font-inter font-semibold text-white border rounded-[5px] border-white w-[214px] h-[60px] flex justify-center items-center hover:text-orange-normal hover:border-orange-normal ease-in duration-300">
+          <button className="text-lg font-inter font-semibold text-white border rounded-[5px] border-white w-[214px] h-[60px] flex justify-center items-center hover:bg-orange-normal hover:border-orange-normal ease-in duration-300">
             Fazer pedido
           </button>
         </div>

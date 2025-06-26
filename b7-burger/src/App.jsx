@@ -1,6 +1,5 @@
 import logo from "./assets/images/logo.png";
 
-
 import {
   Card,
   Footer,
@@ -8,7 +7,8 @@ import {
   SectionBurgerSearch,
   Banner,
   Menu,
-  Cart
+  Cart,
+  Modal
 } from "./components";
 
 export default function App() {
@@ -37,9 +37,11 @@ export default function App() {
 
       <Footer logo={logo} />
 
+      <Modal />
+
       {/* <Menu logo={logo} /> */}
 
-     <Cart logo={logo}/>
+      {/* <Cart logo={logo}/> */}
     </>
   );
 }
