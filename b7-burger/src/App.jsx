@@ -8,12 +8,14 @@ import {
   Banner,
   Menu,
   Cart,
-  Modal
+  Modal,
 } from "./components";
+import { MenuProvider } from "./context/MenuContext";
 
 export default function App() {
+
   return (
-    <>
+    <MenuProvider>
       <Header logo={logo} />
 
       <main>
@@ -37,11 +39,11 @@ export default function App() {
 
       <Footer logo={logo} />
 
-      <Modal />
+      {/* <Modal /> */}
 
-      {/* <Menu logo={logo} /> */}
+      <Menu logo={logo} />
 
       {/* <Cart logo={logo}/> */}
-    </>
+    </MenuProvider>
   );
 }

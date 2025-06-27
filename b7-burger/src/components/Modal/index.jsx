@@ -2,7 +2,7 @@ import burger from "../../assets/images/burger.png";
 
 export default function Modal() {
   return (
-    <div className="absolute top-0 left-0 w-screen h-screen bg-modal z-30 flex justify-center items-center">
+    <div className="fixed top-0 left-0 w-screen h-screen bg-modal z-30 flex justify-center items-center">
       <div className="bg-black-dark h-full max-h-[500px] flex flex-col gap-3 w-full max-w-[800px] p-10 rounded-[24px] grid grid-cols-1 laptop:grid-cols-2">
         <div className="flex items-center justify-center">
           <img src={burger} alt="" />

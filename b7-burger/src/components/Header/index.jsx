@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { MenuContext } from "../../context/MenuContext";
+
 export default function Header({ logo }) {
+    const { setShowMenu } = useContext(MenuContext);
   return (
     <header className="bg-black-dark px-5  py-10 laptop:px-10">
       <div className="flex items-center justify-between container mx-auto laptop:gap-20 ">
@@ -50,7 +54,7 @@ export default function Header({ logo }) {
           </button>
         </div>
 
-        <button className="laptop:hidden">
+        <button className="laptop:hidden" onClick={() => setShowMenu((element) => !element)}>
           <i class="fa-solid fa-bars text-white text-[32px]"></i>
         </button>
       </div>
