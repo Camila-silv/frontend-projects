@@ -1,9 +1,22 @@
+import { useContext } from "react";
 import burger from "../../assets/images/burger.png";
+import { ModalContext } from "../../context/ModalContect";
 
 export default function Modal() {
+  const { showModal, setShowModal } = useContext(ModalContext);
   return (
-    <div className="fixed top-0 left-0 w-screen h-screen bg-modal z-30 flex justify-center items-center">
-      <div className="bg-black-dark h-full max-h-[500px] flex flex-col gap-3 w-full max-w-[800px] p-10 rounded-[24px] grid grid-cols-1 laptop:grid-cols-2">
+    <div
+      className={`fixed top-0 left-0 w-screen h-screen bg-modal z-30 flex justify-center items-center ease-in duration-300 p-10 ${
+        showModal
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+      }`}
+    >
+      <div
+        className={`bg-black-dark h-full max-h-auto laptop:max-h-[500px] flex flex-col gap-3 w-full max-w-[800px] p-10 rounded-[24px] grid grid-cols-1 laptop:grid-cols-2 ease-linear duration-300 transition-transform overflow-scroll laptop:overflow-hidden ${
+          showModal ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+        }`}
+      >
         <div className="flex items-center justify-center">
           <img src={burger} alt="" />
         </div>
@@ -18,7 +31,7 @@ export default function Modal() {
           <span className="font-inter text-white uppercase text-sm mb-[5px] block">
             Preço
           </span>
-          <div className="flex gap-6 items-center">
+          <div className="flex flex-col laptop:flex-row gap-6 laptop:items-center">
             <span className="font-inter text-white text-3xl">R$ 42,90</span>
 
             <div className="flex items-center bg-[#222222] rounded-lg py-2 px-4 gap-3 w-[100px]">
@@ -35,7 +48,7 @@ export default function Modal() {
             </div>
           </div>
 
-          <div className="flex gap-3 mt-6 grow items-end">
+          <div className="flex flex-col laptop:flex-row gap-3 mt-6 grow items-end">
             <a
               href="/"
               title="Finalizar Compra"
@@ -43,13 +56,12 @@ export default function Modal() {
             >
               Finalizar Compra
             </a>
-            <a
-              href="/"
-              title="Cancelar"
+            <button
               className="text-[18px] font-inter text-white text-center font-semibold  w-full h-[50px] block flex justify-center items-center mx-auto  laptop:mx-0  laptop:h-[60px] hover:text-orange-normal ease-in duration-300"
+              onClick={() => setShowModal(false)}
             >
               Cancelar
-            </a>
+            </button>
           </div>
         </div>
       </div>

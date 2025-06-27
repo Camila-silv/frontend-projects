@@ -600,6 +600,10 @@ video {
   left: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .right-10 {
   right: 2.5rem;
 }
@@ -610,10 +614,6 @@ video {
 
 .top-5 {
   top: 1.25rem;
-}
-
-.right-0 {
-  right: 0px;
 }
 
 .z-30 {
@@ -707,6 +707,10 @@ video {
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .max-h-60 {
   max-height: 15rem;
 }
@@ -739,10 +743,6 @@ video {
   width: 100vw;
 }
 
-.w-0 {
-  width: 0px;
-}
-
 .max-w-\[800px\] {
   max-width: 800px;
 }
@@ -766,6 +766,16 @@ video {
 
 .translate-x-full {
   --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-0 {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-16 {
+  --tw-translate-y: 4rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -835,6 +845,10 @@ video {
 
 .overflow-scroll {
   overflow: scroll;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .rounded-\[10px\] {
@@ -1111,12 +1125,6 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1129,10 +1137,6 @@ video {
   transition-duration: 150ms;
 }
 
-.delay-300 {
-  transition-delay: 300ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1143,6 +1147,10 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-linear {
+  transition-timing-function: linear;
 }
 
 .no-spinner::-webkit-outer-spin-button,
@@ -1238,6 +1246,10 @@ video {
     height: 80px;
   }
 
+  .laptop\:max-h-\[500px\] {
+    max-height: 500px;
+  }
+
   .laptop\:w-\[280px\] {
     width: 280px;
   }
@@ -1254,12 +1266,20 @@ video {
     flex-direction: row;
   }
 
+  .laptop\:items-center {
+    align-items: center;
+  }
+
   .laptop\:justify-between {
     justify-content: space-between;
   }
 
   .laptop\:gap-20 {
     gap: 5rem;
+  }
+
+  .laptop\:overflow-hidden {
+    overflow: hidden;
   }
 
   .laptop\:px-10 {

@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import burger from "../../assets/images/burger.png";
+import { ModalContext } from "../../context/ModalContect";
 
 export default function Card() {
+  const {setShowModal} = useContext(ModalContext)
   return (
-    <a href="/" className="w-full max-w-sm mx-auto">
+    <div className="w-full max-w-sm mx-auto" onClick={() => setShowModal(true)}>
       <div className="bg-card w-full rounded-lg flex flex-col items-center px-10 py-8">
         <img src={burger} alt="" title="" loading="lazy" width="" height="" />
         <div className="w-full mt-6">
@@ -17,6 +20,6 @@ export default function Card() {
           </span>
         </div>
       </div>
-    </a>
+    </div>
   );
 }
