@@ -8,7 +8,7 @@ export default function SectionBurgerSearch() {
         </p>
         <div className="flex flex-col gap-5 items-center laptop:flex-row laptop:justify-between">
           <div className="flex gap-3 items-center bg-[#2B2B2B] w-full  h-[67px] rounded-[5px] px-5 laptop:h-[80px]">
-            <i class="fa-solid fa-magnifying-glass text-white text-[24px]"></i>
+            <i className="fa-solid fa-magnifying-glass text-white text-[24px]"></i>
             <input
               type="text"
               placeholder="Digite o nome do Burger"

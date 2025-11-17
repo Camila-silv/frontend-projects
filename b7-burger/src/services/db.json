@@ -1,0 +1,64 @@
+{
+  "snacks": [
+    {
+      "id": "1",
+      "title": "Texas Vegetariano",
+      "value": 15.99,
+      "subTitle": "Tradicional",
+      "src": "/burger.png",
+      "kid": false,
+      "vegetarian": true,
+      "qtr": 1
+    },
+    {
+      "id": "2",
+      "title": "Texas Kid",
+      "value": 15.99,
+      "subTitle": "Tradicional",
+      "src": "/burger2.png",
+      "kid": true,
+      "vegetarian": false,
+      "qtr": 1
+    },
+    {
+      "id": "3",
+      "title": "Texas Burger",
+      "value": 44.99,
+      "subTitle": "Tradicional",
+      "src": "/burger.png",
+      "kid": false,
+      "vegetarian": false,
+      "qtr": 1
+    },
+    {
+      "id": "4",
+      "title": "Texas Burger",
+      "value": 15.99,
+      "subTitle": "Tradicional",
+      "src": "/burger4.png",
+      "kid": false,
+      "vegetarian": false,
+      "qtr": 1
+    },
+    {
+      "id": "5",
+      "title": "Texas Bacon",
+      "value": 30.0,
+      "subTitle": "Tradicional",
+      "src": "/burger3.png",
+      "kid": false,
+      "vegetarian": false,
+      "qtr": 1
+    },
+    {
+      "id": "6",
+      "title": "Texas Salada",
+      "value": 100.0,
+      "subTitle": "Tradicional",
+      "src": "/burger.png",
+      "kid": false,
+      "vegetarian": false,
+      "qtr": 1
+    }
+  ]
+}

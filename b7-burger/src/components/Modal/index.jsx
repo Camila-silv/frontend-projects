@@ -1,9 +1,53 @@
-import { useContext } from "react";
-import burger from "../../assets/images/burger.png";
+import { useContext, useEffect, useState } from "react";
 import { ModalContext } from "../../context/ModalContect";
+import { addProductToCart, dealWithItemQuantity } from "../../utils";
+import { CartContext } from "../../context/CartContext";
 
-export default function Modal() {
+export default function Modal({
+  handleSnackID,
+  notifyPurchase,
+  purchaseDeniedNotification,
+}) {
   const { showModal, setShowModal } = useContext(ModalContext);
+  const [snack, setSnack] = useState({});
+  const { cartList, setCartList } = useContext(CartContext);
+  const [numberSnacks, setNumberSnacks] = useState(1);
+
+  useEffect(() => {
+    if (handleSnackID === null) return;
+
+    async function getSnack(id) {
+      const response = await fetch(`http://localhost:3000/snacks/${id}`);
+      const surveyResponse = await response.json();
+      setSnack(surveyResponse);
+    }
+
+    getSnack(handleSnackID);
+  }, [handleSnackID]);
+
+  const handleSnacksNumber = (operation) => {
+    if (operation === "positive") {
+      if (numberSnacks >= 10) return;
+      setNumberSnacks((item) => item + 1);
+    } else {
+      if (numberSnacks <= 1) return;
+      setNumberSnacks((item) => item - 1);
+    }
+  };
+
+  const getSnack = () => {
+    addProductToCart(
+      snack,
+      notifyPurchase,
+      setCartList,
+      cartList,
+      purchaseDeniedNotification,
+      numberSnacks
+    );
+    setNumberSnacks(1);
+    setShowModal(false);
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-screen h-screen bg-modal z-30 flex justify-center items-center ease-in duration-300 p-10 ${
@@ -18,11 +62,18 @@ export default function Modal() {
         }`}
       >
         <div className="flex items-center justify-center">
-          <img src={burger} alt="" />
+          <img
+            src={snack.src}
+            alt={`Ilustração ${snack.title}`}
+            title={`Ilustração ${snack.title}`}
+            loading="lazy"
+            width="188"
+            height="170"
+          />
         </div>
         <div className="flex flex-col">
           <h2 className="font-calistoga text-white text-5xl mt-5">
-            Texas Burger
+            {snack.title}
           </h2>
           <p className="font-inter text-white text-base my-6">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat,
@@ -32,30 +83,46 @@ export default function Modal() {
             Preço
           </span>
           <div className="flex flex-col laptop:flex-row gap-6 laptop:items-center">
-            <span className="font-inter text-white text-3xl">R$ 42,90</span>
+            <span className="font-inter text-white text-3xl">
+              {new Intl.NumberFormat("pt-BR", {
+                style: "currency",
+                currency: "BRL",
+              }).format(snack.value)}
+            </span>
 
             <div className="flex items-center bg-[#222222] rounded-lg py-2 px-4 gap-3 w-[100px]">
-              <button className="text-white font-bold text-base">-</button>
+              <button
+                className="text-white font-bold text-base"
+                onClick={() => handleSnacksNumber("negative")}
+              >
+                -
+              </button>
               <input
                 type="number"
                 className="bg-transparent w-full outline-none no-spinner text-center font-inter text-white font-medium text-sm py-2 mobile:py-0"
                 min="1"
                 max="10"
                 name="quantity"
+                value={numberSnacks}
+                readOnly
                 aria-label="Quantidade de lanche"
               />
-              <button className="text-white font-bold text-base">+</button>
+              <button
+                className="text-white font-bold text-base"
+                onClick={() => handleSnacksNumber("positive")}
+              >
+                +
+              </button>
             </div>
           </div>
 
           <div className="flex flex-col laptop:flex-row gap-3 mt-6 grow items-end">
-            <a
-              href="/"
-              title="Finalizar Compra"
+            <button
               className="text-[18px] font-inter text-white text-center font-semibold bg-orange-normal border border-orange-normal w-full h-[50px] block flex justify-center items-center mx-auto rounded-[5px] laptop:mx-0  laptop:h-[60px] hover:border-white hover:bg-transparent ease-in duration-300"
+              onClick={getSnack}
             >
-              Finalizar Compra
-            </a>
+              Comprar
+            </button>
             <button
               className="text-[18px] font-inter text-white text-center font-semibold  w-full h-[50px] block flex justify-center items-center mx-auto  laptop:mx-0  laptop:h-[60px] hover:text-orange-normal ease-in duration-300"
               onClick={() => setShowModal(false)}

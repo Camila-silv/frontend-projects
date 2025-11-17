@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { MenuContext } from "../../context/MenuContext";
+import { BtnCart } from "../index";
 
 export default function Header({ logo }) {
-    const { setShowMenu } = useContext(MenuContext);
+  const { setShowMenu } = useContext(MenuContext);
   return (
     <header className="bg-black-dark px-5  py-10 laptop:px-10">
       <div className="flex items-center justify-between container mx-auto laptop:gap-20 ">
@@ -49,14 +50,22 @@ export default function Header({ logo }) {
             </ul>
           </nav>
 
-          <button className="text-lg font-inter font-semibold text-white border rounded-[5px] border-white w-[214px] h-[60px] flex justify-center items-center hover:bg-orange-normal hover:border-orange-normal ease-in duration-300">
-            Fazer pedido
-          </button>
+          <div className="flex items-center gap-10">
+            <button className="text-lg font-inter font-semibold text-white border rounded-[5px] border-white w-[214px] h-[60px] flex justify-center items-center hover:bg-orange-normal hover:border-orange-normal ease-in duration-300">
+              Fazer pedido
+            </button>
+
+            <BtnCart />
+          </div>
         </div>
 
-        <button className="laptop:hidden" onClick={() => setShowMenu((element) => !element)}>
-          <i class="fa-solid fa-bars text-white text-[32px]"></i>
-        </button>
+        <div className="laptop:hidden flex items-center gap-6">
+          <button onClick={() => setShowMenu((element) => !element)}>
+            <i className="fa-solid fa-bars text-white text-[32px]"></i>
+          </button>
+
+          <BtnCart />
+        </div>
       </div>
     </header>
   );
